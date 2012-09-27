@@ -77,17 +77,17 @@ PRODUCT_PACKAGES += \
 
 # These are the OpenMAX IL configuration files
 PRODUCT_COPY_FILES += \
-	device/samsung/aries-common/sec_mm/sec_omx/sec_omx_core/secomxregistry:system/etc/secomxregistry \
+	hardware/samsung/exynos3/s5pc110/sec_mm/sec_omx/sec_omx_core/secomxregistry:system/etc/secomxregistry \
 	device/samsung/aries-common/media_profiles.xml:system/etc/media_profiles.xml \
 	device/samsung/aries-common/media_codecs.xml:system/etc/media_codecs.xml
 
 # These are the OpenMAX IL modules
 PRODUCT_PACKAGES += \
-	libSEC_OMX_Core.aries \
-	libOMX.SEC.AVC.Decoder.aries \
-	libOMX.SEC.M4V.Decoder.aries \
-	libOMX.SEC.M4V.Encoder.aries \
-	libOMX.SEC.AVC.Encoder.aries
+	libSEC_OMX_Core \
+	libOMX.SEC.AVC.Decoder \
+	libOMX.SEC.M4V.Decoder \
+	libOMX.SEC.M4V.Encoder \
+	libOMX.SEC.AVC.Encoder
 
 PRODUCT_PACKAGES += \
 	audio.primary.aries \
@@ -98,7 +98,8 @@ PRODUCT_PACKAGES += \
 	lights.aries
 
 PRODUCT_COPY_FILES += \
-	device/samsung/aries-common/libaudio/audio_policy.conf:system/etc/audio_policy.conf
+	device/samsung/aries-common/libaudio/audio_policy.conf:system/etc/audio_policy.conf \
+	vendor/aokp/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -107,7 +108,7 @@ PRODUCT_PACKAGES += \
 
 # Libs
 PRODUCT_PACKAGES += \
-	hwcomposer.aries \
+	hwcomposer.s5pc110 \
 	libstagefrighthw
 
 # Camera
